@@ -44,6 +44,9 @@ class PhoneNumber(phonenumbers.phonenumber.PhoneNumber):
             return self.format_as(fmt)
         return self.raw_input
 
+    def __repr__(self):
+        return unicode(self)
+
     def is_valid(self):
         """
         checks whether the number supplied is actually valid
